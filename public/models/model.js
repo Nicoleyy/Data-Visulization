@@ -2,5 +2,7 @@
 var mongoose = require('mongoose');
 
 module.exports = mongoose.model('model', {
-    text : String
+    Data : Date,
+	Revenue : Double,
+    Cost : Double
 });
