@@ -1,0 +1,11 @@
+{
+  "name": "data-visulization",
+  "version": "0.0.0",
+  "description": "Graduation Project.",
+  "main": "app.js",
+  "author": "Nicole",
+  "dependencies": {
+    "express": "^3.4.8",
+    "mongoose": "~3.6.2"
+  }
+}
