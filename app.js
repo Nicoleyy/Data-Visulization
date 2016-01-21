@@ -1,7 +1,7 @@
 var express  = require('express');
 var app      = express();                           
 var mongoose = require('mongoose');                   
-var database = require('./config/database');
+var database = require('./server/config/database');
 
 var port = process.env.PORT || 8888;
 
@@ -15,7 +15,7 @@ app.configure(function() {
 });
 
 // JSON API
-require('./routes/api')(app);
+require('./server/routes/api')(app);
 
 app.listen(port);
 console.log("App listening on port " + port);
