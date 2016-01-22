@@ -1,0 +1,15 @@
+{
+  "name": "amcharts",
+  "version": "3.13.3",
+  "main": "./dist/amcharts/amcharts.js",
+  "homepage": "https://github.com/arturgspb/bower-amcharts",
+  "_release": "3.13.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.13.3",
+    "commit": "6ac5e2640262891459e4c1c98132db12732d0153"
+  },
+  "_source": "https://github.com/arturgspb/bower-amcharts.git",
+  "_target": "~3.13.0",
+  "_originalSource": "amcharts"
+}

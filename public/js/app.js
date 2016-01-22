@@ -1,12 +1,12 @@
 /* App Module */
-angular.module('DataVisualization',['ngRoute']).
+angular.module('DataVisualization',['ngRoute','amChartsDirective']).
   config(['$routeProvider',  function($routeProvider) {
     $routeProvider.
-      when('/getDataset', {
+      when('/', {
         templateUrl: 'views/index.html',
         controller: AppCtrl
       }).
       otherwise({
-        redirectTo: '/getDataset'
+        redirectTo: '/'
       });
   }]);
