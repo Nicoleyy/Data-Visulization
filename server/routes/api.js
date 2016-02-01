@@ -4,7 +4,7 @@ var data = require('../data/data');
 module.exports = function(app) {
     app.get('/getData', function(req, res) {
         console.log("i received a get request ");
-        model.find(function(err,docs){
+        model.find({},{'_id':0},function(err,docs){
             res.json(docs);
         });
     });

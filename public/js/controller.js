@@ -81,5 +81,6 @@ function AppCtrl($scope,$http,$q,$compile){
         };
         var amChartElement = $compile('<am-chart id="myChart" options="amChartOptions"></am-chart>')($scope);
         $("#amChart").append(amChartElement);
+        $scope.modelKeys = Object.keys(respose[0]);
     });
 }
