@@ -13,26 +13,82 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-9 col-md-10  main">
-      <div class="page-header">
-          <ul>
-              <li>ni</li>
-              <li>hao</li>
-          </ul>
-      </div>
-
-      <div class="row placeholders">
-        <div id="myChart" class="chartStyle"></div>
-      </div>
-
-      <div class="sub-header">
-          <ul>
-              <li>ni</li>
-              <li>hao</li>
-          </ul>
-      </div>
+    <div class="col-md-1">
+        <div class="left-div top-buffer pull-right"></div>
     </div>
-    <div class="col-sm-3 col-md-2 col-md-offset-10 col-sm-offset-9" sidebar>
+    <div class="col-md-9">
+        <div class="page-header">
+            <ul class="list-inline">
+                <li>
+                    <a href="#theme-light">
+                        <img src="./css/images/theme_light.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#theme-light">
+                        <img src="./css/images/theme_dark.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#theme-light">
+                        <img src="./css/images/theme_chalk.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#theme-light">
+                        <img src="./css/images/theme_pattern.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#theme-light">
+                        <img src="./css/images/theme_none.png">
+                    </a>
+                </li>
+                <li>
+                    <span class="theme-text">&nbsp;&nbsp;Click to change theme</span>
+                </li>
+            </ul>
+        </div>
+        <div id="myChart" class="chartStyle"></div>
+        <div class="bottom-div"></div>
+    </div>
+    <div class="col-md-2 top-buffer">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/BubbleChart.jpg">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/DataBasedData.jpg">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/PolarChart.jpg">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/DonutChart.jpg">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/CSSAnimations.png">
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                    <img src="./css/images/GanttChart.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="page-header"></div>
+        <div class="row">
+            <div ng-repeat="key in modelKeys">{{key}}</div>
+        </div>
     </div>
   </div>
 </div>

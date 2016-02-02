@@ -28,6 +28,40 @@ body {
 .right {
   background-color: transparent;
 }
+
+.left-div {
+  width: 50px;
+  height : 800px;
+  outline-style: dashed;
+  outline-color: #CCCCCC
+}
+
+.bottom-div {
+  height : 50px;
+  outline-style: dashed;
+  outline-color: #CCCCCC
+}
+
+.theme-text {
+  font-size: 13px;
+  color: #CCCCCC;
+  font-weight: 300;
+}
+
+.bottom-text {
+  font-size: 20px;
+  color: #CCCCCC;
+  font-weight: 300;
+}
+
+.chart-type{
+    width: 11.2px;
+    height: 5px;
+}
+
+.top-buffer {
+  margin-top:100px;
+}
 /*
  * Top navigation
  * Hide default border to remove 1px line.
