@@ -1,0 +1,21 @@
+{
+  "name": "data-visulization",
+  "description": "Graduation Project.",
+  "main": "app.js",
+  "authors": [
+    "Nicole"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Nicoleyy/Data-Visulization",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "amcharts-angular": "*"
+  }
+}
