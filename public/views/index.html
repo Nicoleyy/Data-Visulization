@@ -19,29 +19,9 @@
     <div class="col-md-9">
         <div class="page-header">
             <ul class="list-inline">
-                <li>
-                    <a href="#theme-light">
-                        <img src="./css/images/theme_light.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#theme-light">
-                        <img src="./css/images/theme_dark.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#theme-light">
-                        <img src="./css/images/theme_chalk.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#theme-light">
-                        <img src="./css/images/theme_pattern.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#theme-light">
-                        <img src="./css/images/theme_none.png">
+                <li ng-model="themeProperties" ng-repeat="themeProperty in themeProperties">
+                    <a class="pointer" ng-click="setTheme(themeProperty)">
+                        <img src={{themeProperty.img}} alt={{themeProperty.alt}}>
                     </a>
                 </li>
                 <li>
@@ -87,7 +67,7 @@
         </div>
         <div class="page-header"></div>
         <div class="row">
-            <div ng-repeat="key in modelKeys">{{key}}</div>
+            <div id="draggableKey" ng-repeat="key in modelKeys">{{key}}</div>
         </div>
     </div>
   </div>

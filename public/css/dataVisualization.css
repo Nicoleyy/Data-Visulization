@@ -62,6 +62,20 @@ body {
 .top-buffer {
   margin-top:100px;
 }
+
+.pointer {
+  cursor:pointer
+}
+
+.darkStyle {
+  background: #3f3f4f;
+  color: #ffffff;
+}
+
+.chalkStyle {
+    background: #282828 url('./images/bg.jpg');
+    color: #fff;
+}
 /*
  * Top navigation
  * Hide default border to remove 1px line.
