@@ -29,39 +29,14 @@
                 </li>
             </ul>
         </div>
-        <div id="myChart" class="chartStyle"></div>
+        <div id="chartContainer" class="chartStyle"></div>
         <div class="bottom-div"></div>
     </div>
     <div class="col-md-2 top-buffer">
         <div class="row">
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/BubbleChart.jpg">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/DataBasedData.jpg">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/PolarChart.jpg">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/DonutChart.jpg">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/CSSAnimations.png">
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="#" class="thumbnail">
-                    <img src="./css/images/GanttChart.jpg">
+            <div class="col-md-6 pointer" ng-model="chartTypes" ng-repeat="chartType in chartTypes">
+                <a class="thumbnail" ng-click="setType(chartType)">
+                    <img src={{chartType.img}} alt={{chartType.alt}}>
                 </a>
             </div>
         </div>

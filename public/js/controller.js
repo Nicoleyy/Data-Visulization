@@ -1,116 +1,24 @@
 /* Controllers */
 function AppCtrl($scope,$http,$q,$compile){
     console.log("My Name is Nicole");
-    $scope.amChartOptions = {
-        "type": "serial",
-        "theme": "light",
-        "marginRight": 40,
-        "marginLeft": 40,
-        "autoMarginOffset": 20,
-        "dataDateFormat": "YYYY-MM-DD",
-        "valueAxes": [{
-            "id": "v1",
-            "axisAlpha": 0,
-            "position": "left",
-            "ignoreAxisWidth":true
-        }],
-        "balloon": {
-            "borderThickness": 1,
-            "shadowAlpha": 0
-        },
-        "graphs": [{
-            "id": "g1",
-            "balloon":{
-              "drop":true,
-              "adjustBorderColor":false,
-              "color":"#ffffff"
-            },
-            "bullet": "round",
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "bulletSize": 5,
-            "hideBulletsCount": 50,
-            "lineThickness": 2,
-            "title": "red line",
-            "useLineColorForBulletBorder": true,
-            "valueField": "value",
-            "balloonText": "<span style='font-size:18px;'>[[value]]</span>"
-        }],
-        "chartScrollbar": {
-            "graph": "g1",
-            "oppositeAxis":false,
-            "offset":30,
-            "scrollbarHeight": 80,
-            "backgroundAlpha": 0,
-            "selectedBackgroundAlpha": 0.1,
-            "selectedBackgroundColor": "#888888",
-            "graphFillAlpha": 0,
-            "graphLineAlpha": 0.5,
-            "selectedGraphFillAlpha": 0,
-            "selectedGraphLineAlpha": 1,
-            "autoGridCount":true,
-            "color":"#AAAAAA"
-        },
-        "chartCursor": {
-            "pan": true,
-            "valueLineEnabled": true,
-            "valueLineBalloonEnabled": true,
-            "cursorAlpha":1,
-            "cursorColor":"#258cbb",
-            "limitToGraph":"g1",
-            "valueLineAlpha":0.2
-        },
-        "valueScrollbar":{
-          "oppositeAxis":false,
-          "offset":50,
-          "scrollbarHeight":10
-        },
-        "categoryField": "date",
-        "categoryAxis": {
-            "parseDates": true,
-            "dashLength": 1,
-            "minorGridEnabled": true
-        },
-        "export": {
-            "enabled": true
-        }
-    };
-    $scope.themeProperties = [{
-        "img": "./css/images/theme_light.png",
-        "alt": "theme_light",
-        "theme": "light",
-        "data_css": "darkStyle"
-    },{
-        "img": "./css/images/theme_dark.png",
-        "alt": "theme_dark",
-        "theme": "dark",
-        "data_css": ""
-    },{
-        "img": "./css/images/theme_chalk.png",
-        "alt": "theme_chalk",
-        "theme": "chalk",
-        "data_css": ""
-    },{
-        "img": "./css/images/theme_pattern.png",
-        "alt": "theme_pattern",
-        "pattern": "patterns",
-        "data_css": ""
-    },{
-        "img": "./css/images/theme_none.png",
-        "alt": "theme_none",
-        "theme": "none",
-        "data_css": ""
-    }];
+    $scope.amChartOptions = chartDefaultOpt;
+    $scope.themeProperties = themeProperties;
+    $scope.chartTypes = chartTypes;
     $scope.setTheme = function(property){
         $scope.amChartOptions.theme = property.theme;
-        // $("#amChart").attr('style', property.data_css);
+        $("#chartContainer").attr('style', property.data_css);
+        $scope.$broadcast('amCharts.renderChart', $scope.amChartOptions, 'myChart');
+    }
+    $scope.setType = function(property){
+        $scope.amChartOptions = property.Opt;
+        $scope.amChartOptions.data = $scope.data;
         $scope.$broadcast('amCharts.renderChart', $scope.amChartOptions, 'myChart');
     }
     $http.get('/getData').success(function(respose){
         console.log("i got a data respose");
-        $scope.amChartOptions.data = respose;
+        $scope.amChartOptions.data = $scope.data = respose;
         var amChartElement = $compile('<am-chart id="myChart" options="amChartOptions"></am-chart>')($scope);
-        $("#amChart").append(amChartElement);
+        $("#chartContainer").append(amChartElement);
         $scope.modelKeys = Object.keys(respose[0]);
     });
 }
