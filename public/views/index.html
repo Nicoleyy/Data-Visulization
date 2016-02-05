@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top background">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Data Visualization</a>
@@ -13,8 +13,8 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-1">
-        <div class="left-div top-buffer pull-right"></div>
+    <div class="col-md-1 top-buffer">
+        <div class="left-div  pull-right"></div>
     </div>
     <div class="col-md-9">
         <div class="page-header">
@@ -34,10 +34,9 @@
     </div>
     <div class="col-md-2 top-buffer">
         <div class="row">
-            <div class="col-md-6 pointer" ng-model="chartTypes" ng-repeat="chartType in chartTypes">
-                <a class="thumbnail" ng-click="setType(chartType)">
-                    <img src={{chartType.img}} alt={{chartType.alt}}>
-                </a>
+            <div class="col-md-6 pointer" ng-model="chartTypes" ng-repeat="chartType in chartTypes" ng-click="setType(chartType)">
+                <a class="pointer" ng-click="setType(chartType)">{{chartType.type}}</a>
+                <a class="thumbnail"><img src={{chartType.img}} alt={{chartType.alt}}></a>
             </div>
         </div>
         <div class="page-header"></div>
@@ -47,3 +46,5 @@
     </div>
   </div>
 </div>
+<!-- <nav class="navbar navbar-inverse vnavbar-fixed-top">
+</nav> -->

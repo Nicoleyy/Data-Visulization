@@ -99,62 +99,234 @@ var themeProperties = [{
     "data_css": ""
 }];
 var chartTypes = [{
-    "type": "column",
-    "img": "./css/images/ColumnChart.jpg",
-    "alt": "Column Chart",
+    "type": "line",
+    "img": "./css/images/LineChart.jpg",
+    "alt": "Line Chart",
     "Opt": {
         "type": "serial",
+        "theme": "light",
+        "marginRight":80,
+        "marginTop":24,
+        "dataDateFormat":"YYYY-MM-DD",
+        "rotate": true,
+        "valueAxes": [{
+            "maximum": 30,
+            "minimum": 10,
+            "axisAlpha": 0,
+            "guides": [{
+                "fillAlpha": 0.1,
+                "fillColor": "#99dc67",
+                "lineAlpha": 0,
+                "toValue": 20,
+                "value": 10
+            }, {
+                "fillAlpha": 0.1,
+                "fillColor": "#67b7dc",
+                "lineAlpha": 0,
+                "toValue": 30,
+                "value": 20
+            }]
+        }],
+        "graphs": [{
+            "bullet": "round",
+            "dashLength": 4,
+            "valueField": "value"
+        }],
+        "chartCursor": {
+            "cursorAlpha": 0,
+            "categoryBalloonEnabled": false
+        },
+        "categoryField": "date",
+        "categoryAxis": {
+            "parseDates": true
+        },
+        "chartScrollbar":{
+            "scrollbarHeight":5,
+            "backgroundAlpha":0.1,
+            "backgroundColor":"#868686",
+            "selectedBackgroundColor":"#67b7dc",
+            "selectedBackgroundAlpha":1
+        },
+        "export": {
+            "enabled": true
+         }
+    }
+},{
+    "type": "area",
+    "img": "./css/images/DataBasedData.jpg",
+    "alt": "Data Based Data",
+    "Opt": chartDefaultOpt
+},{
+    "type": "stepLine",
+    "img": "./css/images/StepLineChart.jpg",
+    "alt": "Step Line Chart",
+    "Opt": {
+        "type": "serial",
+        "titles":[{"text":"Step Line Chart"}],
+        "theme": "light",
+        "autoMarginOffset":25,
+        "valueAxes": [{
+            "axisAlpha": 0,
+            "position": "right"
+        }],
+        "graphs": [{
+            "id":"g1",
+            "balloonText": "[[category]]<br><b>[[value]] C</b>",
+            "type": "step",
+            "bullet":"square",
+            "bulletAlpha":0,
+            "bulletSize":4,
+            "bulletBorderAlpha":0,
+            "valueField": "value"
+        }],
+        "chartScrollbar": {
+            "graph":"g1",
+            "gridAlpha":0,
+            "color":"#888888",
+            "scrollbarHeight":55,
+            "backgroundAlpha":0,
+            "selectedBackgroundAlpha":0.1,
+            "selectedBackgroundColor":"#888888",
+            "graphFillAlpha":0,
+            "autoGridCount":true,
+            "selectedGraphFillAlpha":0,
+            "graphLineAlpha":1,
+            "graphLineColor":"#c2c2c2",
+            "selectedGraphLineColor":"#888888",
+            "selectedGraphLineAlpha":1
+        },
+        "chartCursor": {
+            "fullWidth":true,
+            "categoryBalloonDateFormat": "YYYY-MM-DD",
+            "cursorAlpha": 0.05,
+            "graphBulletAlpha":1
+
+        },
+        "dataDateFormat": "YYYY-MM-DD",
+        "categoryField": "date",
+        "categoryAxis": {
+            "minPeriod": "DD",
+            "parseDates": true,
+            "gridAlpha": 0
+        },
+        "export": {
+            "enabled": true
+         }
+    }
+},{
+    "type": "dount",
+    "img": "./css/images/DonutChart.jpg",
+    "alt": "Dount Chart",
+    "Opt": {
+        "type": "pie",
+        "theme": "light",
+        "titleField": "title",
+        "valueField": "titleValue",
+        "labelRadius": 5,
+        "radius": "42%",
+        "innerRadius": "60%",
+        "labelText": "[[title]]",
+        "export": {
+            "enabled": true
+        }
+    }
+},{
+    "type": "bubble",
+    "img": "./css/images/BubbleChart.jpg",
+    "alt": "Bubble Chart",
+    "Opt": {
+        "type": "xy",
       "theme": "light",
+      "balloon":{
+       "fixedPosition":true,
+      },
       "valueAxes": [ {
-        "gridColor": "#FFFFFF",
-        "gridAlpha": 0.2,
-        "dashLength": 0
+        "position": "bottom",
+        "axisAlpha": 0
+      }, {
+        "minMaxMultiplier": 1.2,
+        "axisAlpha": 0,
+        "position": "left"
       } ],
-      "gridAboveGraphs": true,
-      "startDuration": 1,
+      "startDuration": 1.5,
       "graphs": [ {
-        "balloonText": "[[category]]: <b>[[value]]</b>",
-        "fillAlphas": 0.8,
-        "lineAlpha": 0.2,
-        "type": "column",
-        "valueField": "visits"
+        "balloonText": "x:<b>[[x]]</b> y:<b>[[y]]</b><br>value:<b>[[value]]</b>",
+        "bullet": "circle",
+        "bulletBorderAlpha": 0.2,
+        "bulletAlpha": 0.8,
+        "lineAlpha": 0,
+        "fillAlphas": 0,
+        "valueField": "value",
+        "xField": "x",
+        "yField": "y",
+        "maxBulletSize": 100
+      }, {
+        "balloonText": "x:<b>[[x]]</b> y:<b>[[y]]</b><br>value:<b>[[value]]</b>",
+        "bullet": "diamond",
+        "bulletBorderAlpha": 0.2,
+        "bulletAlpha": 0.8,
+        "lineAlpha": 0,
+        "fillAlphas": 0,
+        "valueField": "value2",
+        "xField": "x2",
+        "yField": "y2",
+        "maxBulletSize": 100
       } ],
-      "chartCursor": {
-        "categoryBalloonEnabled": false,
-        "cursorAlpha": 0,
-        "zoomable": false
-      },
-      "categoryField": "country",
-      "categoryAxis": {
-        "gridPosition": "start",
-        "gridAlpha": 0,
-        "tickPosition": "start",
-        "tickLength": 20
-      },
+      "marginLeft": 46,
+      "marginBottom": 35,
       "export": {
         "enabled": true
       }
     }
 },{
-    "type": "lineArea",
-    "img": "./css/images/DataBasedData.jpg",
-    "alt": "Data Based Data"
-},{
-    "type": "stepLine",
-    "img": "./css/images/StepLineChart.jpg",
-    "alt": "Step Line Chart"
-},{
-    "type": "dount",
-    "img": "./css/images/DonutChart.jpg",
-    "alt": "Dount Chart"
-},{
-    "type": "bubble",
-    "img": "./css/images/BubbleChart.jpg",
-    "alt": "Bubble Chart"
-},{
     "type": "polar",
     "img": "./css/images/PolarChart.jpg",
-    "alt": "Paoart Chart"
+    "alt": "Paoart Chart",
+    "Opt": {
+        "type": "radar",
+      "theme": "light",
+      "valueAxes": [ {
+        "gridType": "circles",
+        "minimum": 0,
+        "autoGridCount": false,
+        "axisAlpha": 0.2,
+        "fillAlpha": 0.05,
+        "fillColor": "#FFFFFF",
+        "gridAlpha": 0.08,
+        "guides": [ {
+          "angle": 225,
+          "fillAlpha": 0.3,
+          "fillColor": "#0066CC",
+          "tickLength": 0,
+          "toAngle": 315,
+          "toValue": 14,
+          "value": 0,
+          "lineAlpha": 0,
+
+        }, {
+          "angle": 45,
+          "fillAlpha": 0.3,
+          "fillColor": "#CC3333",
+          "tickLength": 0,
+          "toAngle": 135,
+          "toValue": 14,
+          "value": 0,
+          "lineAlpha": 0,
+        } ],
+        "position": "left"
+      } ],
+      "startDuration": 1,
+      "graphs": [ {
+        "balloonText": "[[category]]: [[value]] m/s",
+        "bullet": "round",
+        "fillAlphas": 0.3,
+        "valueField": "value"
+      } ],
+      "categoryField": "direction",
+      "export": {
+        "enabled": true
+      }
+    }
 }];
 var data = [{
     "date": "2012-07-27",

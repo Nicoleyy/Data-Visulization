@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "amcharts-angular": "*"
+    "amcharts-angular": "*",
+    "angular-dragdrop": "~1.0.13"
   }
 }
