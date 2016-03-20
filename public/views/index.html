@@ -14,7 +14,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1 top-buffer">
-        <div class="left-div  pull-right"></div>
+        <div class="left-div  pull-right thumbnail" data-drop="true" data-jqyoui-options ng-model="valueAxes">
+            <div ng-repeat="valueAxe in valueAxes" ng-show="valueAxe.key">{{valueAxe.key}}</div>
+        </div>
     </div>
     <div class="col-md-9">
         <div class="page-header">
@@ -30,7 +32,7 @@
             </ul>
         </div>
         <div id="chartContainer" class="chartStyle"></div>
-        <div class="bottom-div"></div>
+        <div class="bottom-div thumbnail" data-drop="true" ng-model="categoryAxis" data-jqyoui-options="dropOption"></div>
     </div>
     <div class="col-md-2 top-buffer">
         <div class="row">
@@ -41,7 +43,7 @@
         </div>
         <div class="page-header"></div>
         <div class="row">
-            <div id="draggableKey" ng-repeat="key in modelKeys">{{key}}</div>
+            <div id="draggableKey" data-drag="true" data-jqyoui-options="{revert: 'invalid',helper: 'clone'}" jqyoui-draggable="{index: {{$index}}}" ng-model="modelKeys" ng-repeat="key in modelKeys">{{key.key}}</div>
         </div>
     </div>
   </div>

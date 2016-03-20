@@ -7,10 +7,12 @@
   "dependencies": {
     "amcharts": "^3.14.5",
     "angular": "^1.4.9",
+    "angular-dragdrop": "^1.0.13",
     "angular-route": "^1.4.9",
     "bootstrap": "^3.3.6",
     "express": "^3.4.8",
     "jquery": "^2.2.0",
+    "jquery-ui": "^1.10.5",
     "mongoose": "~3.6.2"
   }
 }

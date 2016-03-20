@@ -1,5 +1,5 @@
 /* App Module */
-angular.module('DataVisualization',['ngRoute','amChartsDirective']).
+angular.module('DataVisualization',['ngRoute','amChartsDirective','ngDragDrop']).
   config(['$routeProvider',  function($routeProvider) {
     $routeProvider.
       when('/getData', {
