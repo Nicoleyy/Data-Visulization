@@ -31,7 +31,7 @@ function AppCtrl($scope,$http,$q,$compile,$timeout){
         $scope.amChartOptions.data = $scope.data = respose;
         var amChartElement = $compile('<am-chart id="myChart" options="amChartOptions"></am-chart>')($scope);
         $("#chartContainer").append(amChartElement);
-        // $scope.modelKeys = Object.keys(respose[0]);
-        $scope.modelKeys = [{"key": "data"}];
+        $scope.modelKeys = Object.keys(respose[0]);
+        // $scope.modelKeys = [{"key": "data"}];
     });
 }

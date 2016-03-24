@@ -14,8 +14,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1 top-buffer">
-        <div class="left-div  pull-right thumbnail" data-drop="true" data-jqyoui-options ng-model="valueAxes">
-            <div ng-repeat="valueAxe in valueAxes" ng-show="valueAxe.key">{{valueAxe.key}}</div>
+        <div class="left-div  pull-right thumbnail">
+            <div data-drop="true" ng-model='valueAxes' jqyoui-droppable="{multiple:true}">
+                <div class="left-text" ng-repeat="item in valueAxes track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="valueAxes" jqyoui-draggable="{index: {{$index}},animate:true}">{{item}}</div>
+                <div class="placeholder left-div"></div>
+            </div>
         </div>
     </div>
     <div class="col-md-9">
@@ -32,7 +35,12 @@
             </ul>
         </div>
         <div id="chartContainer" class="chartStyle"></div>
-        <div class="bottom-div thumbnail" data-drop="true" ng-model="categoryAxis" data-jqyoui-options="dropOption"></div>
+        <div class="bottom-div thumbnail">
+            <div data-drop="true" ng-model='categoryAxis' jqyoui-droppable="{multiple:true}">
+                <div class="bottom-text" ng-repeat="item in categoryAxis track by $index" ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="categoryAxis" jqyoui-draggable="{index: {{$index}},animate:true}">{{item}}</div>
+                <div class="placeholder bottom-div"></div>
+            </div>
+        </div>
     </div>
     <div class="col-md-2 top-buffer">
         <div class="row">
@@ -43,7 +51,9 @@
         </div>
         <div class="page-header"></div>
         <div class="row">
-            <div id="draggableKey" data-drag="true" data-jqyoui-options="{revert: 'invalid',helper: 'clone'}" jqyoui-draggable="{index: {{$index}}}" ng-model="modelKeys" ng-repeat="key in modelKeys">{{key.key}}</div>
+            <div id="draggableKey">
+                <li class="pointer" ng-repeat='item in modelKeys' ng-show="item" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="modelKeys" jqyoui-draggable="{index: {{$index}}, animate: true, placeholder: 'keep'}">{{item}}</li>
+            </div>
         </div>
     </div>
   </div>

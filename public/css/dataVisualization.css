@@ -10,7 +10,14 @@ body {
   overflow: hidden;
   background-color: #f3f3f4;
 }
-
+li {
+  position: relative;
+  left: 40px;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  text-indent: 20px;
+  line-height: 25px;
+}
 /*
  * Global add-ons
  */
@@ -24,13 +31,24 @@ body {
 }
 
 .left-div {
-  width: 50px;
+  width: 70px;
   height : 720px;
+}
+
+.left-text {
+  position: relative;
+  top: 320px
 }
 
 .bottom-div {
   margin-top:30px;
-  height : 50px;
+  height : 70px;
+}
+
+.bottom-text {
+  position: relative;
+  top: 25px;
+  left: 500px
 }
 
 .theme-text {
