@@ -235,7 +235,7 @@ var chartTypes = [{
     "img": "./css/images/BubbleChart.jpg",
     "alt": "Bubble Chart",
     "Opt": {
-        "type": "xy",
+      "type": "xy",
       "theme": "light",
       "balloon":{
        "fixedPosition":true,
