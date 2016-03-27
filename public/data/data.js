@@ -73,34 +73,34 @@ var chartDefaultOpt = {
     }
 };
 var themeProperties = [{
-    "img": "./css/images/theme_light.png",
+    "img": "../css/images/theme_light.png",
     "alt": "theme_light",
     "theme": "light",
     "data_css": "width: 100%;height: 800px;font-size: 11px;"
 },{
-    "img": "./css/images/theme_dark.png",
+    "img": "../css/images/theme_dark.png",
     "alt": "theme_dark",
     "theme": "dark",
     "data_css": "background: #3f3f4f;color:#ffffff;"
 },{
-    "img": "./css/images/theme_chalk.png",
+    "img": "../css/images/theme_chalk.png",
     "alt": "theme_chalk",
     "theme": "chalk",
     "data_css": "background: #282828 url('css/images/bg.jpg');color: #fff;"
 },{
-    "img": "./css/images/theme_pattern.png",
+    "img": "../css/images/theme_pattern.png",
     "alt": "theme_pattern",
     "theme": "patterns",
     "data_css": "width: 100%;height: 800px;font-size: 11px;"
 },{
-    "img": "./css/images/theme_none.png",
+    "img": "../css/images/theme_none.png",
     "alt": "theme_none",
     "theme": "none",
     "data_css": ""
 }];
 var chartTypes = [{
     "type": "line",
-    "img": "./css/images/LineChart.jpg",
+    "img": "../css/images/LineChart.jpg",
     "alt": "Line Chart",
     "Opt": {
         "type": "serial",
@@ -153,12 +153,12 @@ var chartTypes = [{
     }
 },{
     "type": "area",
-    "img": "./css/images/DataBasedData.jpg",
+    "img": "../css/images/DataBasedData.jpg",
     "alt": "Data Based Data",
     "Opt": chartDefaultOpt
 },{
     "type": "stepLine",
-    "img": "./css/images/StepLineChart.jpg",
+    "img": "../css/images/StepLineChart.jpg",
     "alt": "Step Line Chart",
     "Opt": {
         "type": "serial",
@@ -215,7 +215,7 @@ var chartTypes = [{
     }
 },{
     "type": "dount",
-    "img": "./css/images/DonutChart.jpg",
+    "img": "../css/images/DonutChart.jpg",
     "alt": "Dount Chart",
     "Opt": {
         "type": "pie",
@@ -232,7 +232,7 @@ var chartTypes = [{
     }
 },{
     "type": "bubble",
-    "img": "./css/images/BubbleChart.jpg",
+    "img": "../css/images/BubbleChart.jpg",
     "alt": "Bubble Chart",
     "Opt": {
       "type": "xy",
@@ -280,7 +280,7 @@ var chartTypes = [{
     }
 },{
     "type": "polar",
-    "img": "./css/images/PolarChart.jpg",
+    "img": "../css/images/PolarChart.jpg",
     "alt": "Paoart Chart",
     "Opt": {
         "type": "radar",

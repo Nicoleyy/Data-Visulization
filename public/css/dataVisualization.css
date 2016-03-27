@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   background-color: #f3f3f4;
 }
-li {
+div>li {
   position: relative;
   left: 40px;
   display: list-item;

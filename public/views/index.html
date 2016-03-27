@@ -37,7 +37,7 @@
         <div id="chartContainer" class="chartStyle"></div>
         <div class="bottom-div thumbnail">
             <div data-drop="true" ng-model='categoryAxis' jqyoui-droppable="{multiple:true, onDrop: 'bindingChanges'}">
-                <div class="bottom-text" ng-show="categoryAxis" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="categoryAxis" animate:true}">{{categoryAxis}}</div>
+                <div class="bottom-text" ng-show="categoryAxis" data-drag="true" data-jqyoui-options="{revert: 'invalid', helper: 'clone'}" ng-model="categoryAxis">{{categoryAxis}}</div>
                 <div class="placeholder bottom-div"></div>
             </div>
         </div>
@@ -58,5 +58,3 @@
     </div>
   </div>
 </div>
-<!-- <nav class="navbar navbar-inverse vnavbar-fixed-top">
-</nav> -->
