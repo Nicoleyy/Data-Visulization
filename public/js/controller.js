@@ -85,10 +85,14 @@ function AppCtrl($scope,$http,$q,$compile,$timeout){
         };
         reader.onloadend = function(){
             if(newData){
+                $scope.valueAxes = "";
+                $scope.categoryAxis = "";
                 newData = CSV2JSON(newData);
                 $scope.amChartOptions.data = newData;
-                $scope.$broadcast('amCharts.renderChart', $scope.amChartOptions, 'myChart');
                 $scope.modelKeys = Object.keys(newData[0]);
+                $scope.amChartOptions.categoryField = $scope.modelKeys[0];
+                $scope.amChartOptions.graphs[0].valueField = $scope.modelKeys[1];
+                $scope.$broadcast('amCharts.renderChart', $scope.amChartOptions, 'myChart');
             }
         }
         reader.readAsText(theFile);

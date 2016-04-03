@@ -13,6 +13,7 @@
     "express": "^3.4.8",
     "jquery": "^2.2.0",
     "jquery-ui": "^1.10.5",
-    "mongoose": "~3.6.2"
+    "mongoose": "~3.6.2",
+    "social-share.js": "^1.0.12"
   }
 }
