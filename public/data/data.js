@@ -76,7 +76,7 @@ var themeProperties = [{
     "img": "../css/images/theme_light.png",
     "alt": "theme_light",
     "theme": "light",
-    "data_css": "width: 100%;height: 800px;font-size: 11px;"
+    "data_css": "width: 100%;height: 600px;font-size: 11px;"
 },{
     "img": "../css/images/theme_dark.png",
     "alt": "theme_dark",
@@ -91,7 +91,7 @@ var themeProperties = [{
     "img": "../css/images/theme_pattern.png",
     "alt": "theme_pattern",
     "theme": "patterns",
-    "data_css": "width: 100%;height: 800px;font-size: 11px;"
+    "data_css": "width: 100%;height: 600px;font-size: 11px;"
 },{
     "img": "../css/images/theme_none.png",
     "alt": "theme_none",

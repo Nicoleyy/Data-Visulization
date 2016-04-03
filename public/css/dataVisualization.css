@@ -1,8 +1,3 @@
-/*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
   width: 100%;
@@ -18,20 +13,16 @@ div>li {
   text-indent: 20px;
   line-height: 25px;
 }
-/*
- * Global add-ons
- */
-
 .chartStyle {
   width : 100%;
-  height  : 650px;
+  height  : 600px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   background-color: #FFFFFF;
 }
 
 .left-div {
-  width: 70px;
+  width: 100%;
   height : 720px;
 }
 
@@ -41,7 +32,7 @@ div>li {
 }
 
 .bottom-div {
-  margin-top:30px;
+  margin-top:50px;
   height : 70px;
 }
 
@@ -58,9 +49,11 @@ div>li {
 }
 
 .top-buffer {
-  margin-top:120px;
+  margin-top:150px;
 }
-
+.type-buffer {
+  margin-top: 100px;
+}
 .pointer {
   cursor:pointer
 }
@@ -74,10 +67,17 @@ div>li {
     background: #282828 url('./images/bg.jpg');
     color: #fff;
 }
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
 .navbar-fixed-top {
   border: 0;
+}
+.dataMmenu {
+  height: 100%;
+  text-align: center;
+  color: #72acd9;
+}
+.menuItem {
+  padding: 5.5px 0;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.05);
 }
